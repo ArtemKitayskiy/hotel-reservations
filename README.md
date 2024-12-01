@@ -1,5 +1,5 @@
 ## Проект по предсказанию отмены бронирования
-[Ссылка на датасет](www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset)
+[Ссылка на датасет](kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset)
 
 
 ### Установка и запуск
