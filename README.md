@@ -88,26 +88,26 @@ source ./start_mlflow.sh
 - Optuna для подбора гиперпараметров;
 - RandomForestClassifier для решения задачи классификации.
 
-Отобранные признаки:
-['poly__lead_time avg_price_per_room',
- 'poly__avg_price_per_room^2',
- 'kbin__lead_time_1.0',
- 'kbin__lead_time_2.0',
- 'kbin__avg_price_per_room_0.0',
- 'kbin__avg_price_per_room_1.0',
- 'num__no_of_adults',
- 'num__no_of_weekend_nights',
- 'num__no_of_week_nights',
- 'num__lead_time',
- 'num__no_of_previous_cancellations',
- 'cat__type_of_meal_plan',
- 'cat__required_car_parking_space',
- 'cat__room_type_reserved',
- 'cat__arrival_year',
- 'cat__arrival_month',
- 'cat__arrival_date',
- 'cat__market_segment_type',
- 'cat__repeated_guest',
+Отобранные признаки:  
+['poly__lead_time avg_price_per_room',  
+ 'poly__avg_price_per_room^2',  
+ 'kbin__lead_time_1.0',  
+ 'kbin__lead_time_2.0',  
+ 'kbin__avg_price_per_room_0.0',  
+ 'kbin__avg_price_per_room_1.0',  
+ 'num__no_of_adults',  
+ 'num__no_of_weekend_nights',  
+ 'num__no_of_week_nights',  
+ 'num__lead_time',  
+ 'num__no_of_previous_cancellations',  
+ 'cat__type_of_meal_plan',  
+ 'cat__required_car_parking_space',  
+ 'cat__room_type_reserved',  
+ 'cat__arrival_year',  
+ 'cat__arrival_month',  
+ 'cat__arrival_date',  
+ 'cat__market_segment_type',  
+ 'cat__repeated_guest',  
  'cat__no_of_special_requests']
 
 Гиперпараметры:
@@ -123,7 +123,7 @@ source ./start_mlflow.sh
 | F1-Score  | 0.851671 |
 | ROC AUC   | 0.958859 |
 
-run_id модели Production:
+run_id модели Production:  
 f1e402c95cd04b429cc8ec80e1311352
 
 
