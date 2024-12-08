@@ -1,3 +1,8 @@
 *.csv
 *.pkl
+*.txt
 *.venv
+mlflow/mlartifacts/
+mlflow/mlruns.db
+research/catboost_info/
+

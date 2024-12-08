@@ -1,0 +1,43 @@
+artifact_path: best_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.16.0
+model_size_bytes: 109206709
+model_uuid: 10ae7ccbed6e420183099635ad0815ed
+run_id: f1e402c95cd04b429cc8ec80e1311352
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "no_of_adults", "required": true}, {"type": "long",
+    "name": "no_of_children", "required": true}, {"type": "long", "name": "no_of_weekend_nights",
+    "required": true}, {"type": "long", "name": "no_of_week_nights", "required": true},
+    {"type": "string", "name": "type_of_meal_plan", "required": true}, {"type": "boolean",
+    "name": "required_car_parking_space", "required": true}, {"type": "string", "name":
+    "room_type_reserved", "required": true}, {"type": "long", "name": "lead_time",
+    "required": true}, {"type": "long", "name": "arrival_year", "required": true},
+    {"type": "string", "name": "arrival_month", "required": true}, {"type": "string",
+    "name": "arrival_date", "required": true}, {"type": "string", "name": "market_segment_type",
+    "required": true}, {"type": "boolean", "name": "repeated_guest", "required": true},
+    {"type": "long", "name": "no_of_previous_cancellations", "required": true}, {"type":
+    "long", "name": "no_of_previous_bookings_not_canceled", "required": true}, {"type":
+    "double", "name": "avg_price_per_room", "required": true}, {"type": "long", "name":
+    "no_of_special_requests", "required": true}, {"type": "boolean", "name": "is_weekend",
+    "required": true}, {"type": "double", "name": "price_deviation", "required": true}]'
+  outputs: null
+  params: null
+utc_time_created: '2024-12-08 09:57:47.747814'
