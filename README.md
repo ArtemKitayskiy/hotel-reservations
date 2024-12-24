@@ -126,4 +126,63 @@ source ./start_mlflow.sh
 run_id модели Production:  
 f1e402c95cd04b429cc8ec80e1311352
 
+### Структура сервиса предсказаний
+
+Папка ml_service:
+- main.py - основной файл с FastAPI-приложением
+- api_handler.py - файл с классом-обработчиком, который отвечает за загрузку модели и выполнение предсказания
+- Dockerfile - файл для сборки Docker-образа
+- requirements.txt - файл с зависимостями для работы сервиса
+
+Папка models:
+- get_model.py - файл для получения модели из MLflow и записи ее в pickle файл
+- model.pkl - обученная модель, которая используется в сервисе для получения предсказаний
+
+### Создание образа и запуск контейнера:
+1. Для создания Docker-образа выполните команду:
+```
+docker build -t ml_service:v1 .
+```
+
+2. Для запуска контейнера выполните команду:
+```
+docker run -d -p 8000:8000 -v $(pwd)/../models:/models --name ml_service_container ml_service:v1
+```
+
+### Проверка работоспособности:
+
+Пример запроса:
+```
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{
+  "no_of_adults": 2,
+  "no_of_children": 0,
+  "no_of_weekend_nights": 1,
+  "no_of_week_nights": 2,
+  "type_of_meal_plan": "Meal Plan 1",
+  "required_car_parking_space": false,
+  "room_type_reserved": "Room_Type 1",
+  "lead_time": 224,
+  "arrival_year": 2017,
+  "arrival_month": "10",
+  "arrival_date": "02",
+  "market_segment_type": "Offline",
+  "repeated_guest": false,
+  "no_of_previous_cancellations": 0,
+  "no_of_previous_bookings_not_canceled": 0,
+  "avg_price_per_room": 65.0,
+  "no_of_special_requests": 0,
+  "is_weekend": false,
+  "price_deviation": -29.5
+}' \
+"http://localhost:8000/api/prediction?item_id=1"
+```
+
+Ответ:
+```
+{"item_id":"1","predict":0}
+```
+
+
 
