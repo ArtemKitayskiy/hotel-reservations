@@ -7,3 +7,5 @@ mlflow/mlruns.db
 research/catboost_info/
 __pycache__/
 
+!requirements.txt
+
