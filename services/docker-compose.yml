@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ml_service:
+    image: ml_service:v1
+    volumes:
+      - ./models:/models
+    ports:
+      - "8000:8000"
+
+  request_service:
+    image: request_service:v1
+    depends_on:
+      - ml_service

@@ -1,7 +1,7 @@
 *.csv
 *.pkl
 *.txt
-*.venv
+*new_venv
 mlflow/mlartifacts/
 mlflow/mlruns.db
 research/catboost_info/
